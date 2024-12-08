@@ -9,6 +9,7 @@ import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 import Header from "../../pages/Header";
 
 const Team: React.FC = () => {
+  debugger
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 // Define the columns type for DataGrid

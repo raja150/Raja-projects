@@ -52,7 +52,6 @@ const SearchAsync: React.FC<SearchProps> = ({
 
   // Handle change in selected item
   const handleChange = (event: any, selectedItem: Search | null) => {
-    debugger
     if (selectedItem) {
       setSelItem(selectedItem);
       handleValueChange?.("id", selectedItem.id, selectedItem);

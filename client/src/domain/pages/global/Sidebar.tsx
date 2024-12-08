@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Sidebar as ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 // import 'react-pro-sidebar/dist/css/styles.min.css'
 import { tokens } from "../../../theme";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
@@ -28,7 +28,6 @@ interface ItemProps {
 const Item: React.FC<ItemProps> = ({ title, to, icon, selected, setSelected }) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
-    debugger
     return (
         <MenuItem
             active={selected === title}  // Use `selected` prop for Material UI's MenuItem
@@ -39,7 +38,7 @@ const Item: React.FC<ItemProps> = ({ title, to, icon, selected, setSelected }) =
             icon={icon}
         >
             <Typography>{title}</Typography>
-            <Link to={to} />
+            <NavLink to={to} />
         </MenuItem>
     );
 };
